@@ -1,0 +1,6 @@
+scooter_rent=# SELECT c.login,
+scooter_rent-# COUNT(o.*) AS order_count
+scooter_rent-# FROM "Couriers" c
+scooter_rent-# JOIN "Orders" o ON c.id = o."courierId"
+scooter_rent-# WHERE o."inDelivery" = true
+scooter_rent-# GROUP BY c.login;
